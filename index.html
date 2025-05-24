@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FamilyWise - Organização Financeira</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* Reset e base */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Cabeçalho */
+      header {
+        background: linear-gradient(90deg, #4e4e4e, #1b1b1b);
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+
+      #logo {
+        font-size: 3rem;
+        font-weight: bold;
+      }
+
+      .slogan {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+        opacity: 0.9;
+      }
+
+      .underline-anim {
+        position: relative;
+        display: inline-block;
+      }
+
+      .underline-anim::before {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 3px;
+        bottom: 0;
+        left: 0;
+        background-color: #23ac28;
+        animation: underlineGrow 1s forwards 1s;
+      }
+
+      @keyframes underlineGrow {
+        to {
+          width: 100%;
+        }
+      }
+
+      /* Conteúdo */
+      main {
+        max-width: 900px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+
+      .feature {
+        background: #fff;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease-out;
+      }
+
+      .feature.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .feature h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .feature img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 1rem 0;
+      }
+
+      /* Seção de download */
+      .cta {
+        text-align: center;
+        margin: 3rem 0;
+      }
+
+      .cta h3 {
+        max-width: 700px;
+        margin: 0 auto 2rem;
+        font-size: 1.3rem;
+      }
+
+      .download-btn {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background-color: #0f8513;
+        color: white;
+        font-weight: bold;
+        border-radius: 30px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .download-btn:hover {
+        background-color: #09c638;
+        transform: scale(1.2);
+      }
+
+      .download-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 1s ease, transform 1s ease;
+      }
+
+      .download-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Rodapé */
+      footer {
+        background: #ddd;
+        text-align: center;
+        padding: 1rem;
+        font-size: 0.9rem;
+        color: #555;
+      }
+
+      /* Responsividade */
+      @media (max-width: 600px) {
+        #logo {
+          font-size: 2rem;
+        }
+
+        .cta h3 {
+          padding: 0 1rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      #logo::after {
+        content: "|";
+        animation: blink 0.7s infinite;
+      }
+
+      .verde {
+        background: linear-gradient(90deg, #5cff61, #00940c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 id="logo"></h1>
+      <p class="slogan">
+        <span class="underline-anim">Inteligência</span> financeira para sua
+        família
+      </p>
+    </header>
+
+    <main>
+      <section class="feature">
+        <h2>📋 Cadastro de Gastos</h2>
+        <p>
+          Registre rapidamente o que cada membro da família gastou. Simples,
+          prático e direto.
+        </p>
+      </section>
+
+      <section class="feature">
+        <h2>📊 Resumo Mensal</h2>
+        <p>
+          Visualize os principais gastos com gráficos coloridos e objetivos.
+        </p>
+      </section>
+
+      <section class="feature">
+        <h2>🎯 Metas Familiares</h2>
+        <p>
+          Crie metas como "Viagem de férias" ou "Novo sofá" e acompanhe o
+          progresso de todos.
+        </p>
+      </section>
+
+      <div class="cta">
+        <h3>
+          Interessado? Faça o download da nossa planilha e comece agora mesmo
+          uma vida financeira melhor para você e sua família!
+        </h3>
+        <div class="download-section">
+          <a
+            href="caminho-do-arquivo"
+            download="FamilyWise_Prototype"
+            class="download-btn"
+            >Baixar Protótipo</a
+          >
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 FamilyWise Inc. | Protótipo acadêmico</p>
+    </footer>
+
+    <script>
+      // Detecta o botão de download
+      const downloadButton = document.querySelector(".download-section");
+
+      // Cria o observador para monitorar o botão
+      const obs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      obs.observe(downloadButton);
+
+      // Animação de digitação
+      const texto = "FamilyWise";
+      const elemento = document.getElementById("logo");
+      let i = 0;
+
+      function digitar() {
+        if (i <= texto.length) {
+          const parteNormal = texto.substring(0, Math.min(i, 6)); // "Family"
+          const parteColorida = texto.substring(6, i); // "Wise"
+          elemento.innerHTML =
+            parteNormal + '<span class="verde">' + parteColorida + "</span>";
+          i++;
+          setTimeout(digitar, 100);
+        }
+      }
+
+      digitar();
+
+      // Scroll reveal
+      const features = document.querySelectorAll(".feature, .download-section");
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      features.forEach((el) => observer.observe(el));
+    </script>
+  </body>
+</html>
